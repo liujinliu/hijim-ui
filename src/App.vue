@@ -1,27 +1,28 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <lay-out></lay-out>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import LayOut from '@/views/layout'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LayOut
   }
 }
 </script>
 
-<style lang='scss'>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style>
+body, html {
+  margin: 0;
+  height: 100%;
 }
 </style>
+<style lang="scss" scoped>
+#app {
+  height: 100%;
+}
+</style>
+

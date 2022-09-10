@@ -1,10 +1,7 @@
 const EnLang = {
-    common: {
-        home: "ENGLISH",
-        title: "EXAMPLE"
-    },
-    user: {
-        name: "NAME"
+    nav: {
+        home: "HOME",
+        work: "WORK"
     }
 }
 
