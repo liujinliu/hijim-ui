@@ -4,8 +4,8 @@
       <el-menu-item index="/">首页</el-menu-item>
       <el-submenu index="work">
         <template slot="title">工作台</template>
-        <el-menu-item index="/work/apps">应用</el-menu-item>
-        <el-menu-item index="/work/suits">测试集</el-menu-item>
+        <el-menu-item index="/work/units">用例管理</el-menu-item>
+        <el-menu-item index="/work/suits">套件管理</el-menu-item>
       </el-submenu>
       <el-menu-item index="/market">应用市场</el-menu-item>
     </el-menu>

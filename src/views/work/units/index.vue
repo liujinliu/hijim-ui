@@ -1,9 +1,9 @@
 <template>
-    <div>WORKAPPS</div>
+    <div>WORKUNITS</div>
 </template>
 <script>
 export default {
-    name: "WorkAppView",
+    name: "WorkUnitView",
     data() {
         return {}
     }

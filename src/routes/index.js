@@ -1,5 +1,5 @@
 import DashBoardView from '@/views/dashboard'
-import WorkAppView from '@/views/work/apps'
+import WorkUnitView from '@/views/work/units'
 import WorkSuitsView from '@/views/work/suits'
 import MarketView from '@/views/market'
 
@@ -23,9 +23,9 @@ const routes = [
         component: () => import("@/components/layout"),
         children: [
             {
-                path: 'apps',
-                name: 'WorkApps',
-                component: WorkAppView
+                path: 'units',
+                name: 'WorkUnits',
+                component: WorkUnitView
             },
             {
                 path: 'suits',
