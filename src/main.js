@@ -5,10 +5,12 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import EnLang from '@/assets/i18n/lang/en'
 import ZhLang from '@/assets/i18n/lang/zh'
+import VueRouter from 'vue-router'
+import routes from '@/routes'
 
 Vue.use(ElementUI);
-
 Vue.use(VueI18n)
+Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
@@ -20,8 +22,11 @@ const i18n = new VueI18n({
   }
 })
 
+const router = new VueRouter({ routes })
+
 new Vue({
   el: '#app',
   render: h => h(App),
-  i18n
+  i18n,
+  router
 }).$mount('#app')
