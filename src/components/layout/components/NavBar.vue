@@ -1,5 +1,5 @@
 <template>
-  <div class="out-wraper">
+  <div class="nav-bar-wrapper">
     <el-menu :default-active="active" mode="horizontal" router>
       <el-menu-item index="/">首页</el-menu-item>
       <el-submenu index="work">
@@ -7,6 +7,7 @@
         <el-menu-item index="/work/apps">应用</el-menu-item>
         <el-menu-item index="/work/suits">测试集</el-menu-item>
       </el-submenu>
+      <el-menu-item index="/market">应用市场</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -15,8 +16,27 @@ export default {
   name: "NavBar",
   data() {
     return {
-        active: "/",
+        active: '/',
     }
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.nav-bar-wrapper {
+  width: 30%;
+}
+
+.nav-bar-wrapper /deep/ .el-menu.el-menu--horizontal {
+    border-bottom: none;
+}
+
+.nav-bar-wrapper /deep/ .el-menu-item {
+  font-size: xx-small;
+}
+
+.nav-bar-wrapper /deep/ .el-submenu__title {
+  font-size: xx-small;
+}
+
+</style>

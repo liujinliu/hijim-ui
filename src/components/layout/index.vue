@@ -29,7 +29,8 @@ export default {
 // }
 
 .main {
-  // background-color: $body-color;
+  background-color: $body-color;
   height: 100%;
 }
+
 </style>
