@@ -1,7 +1,7 @@
 import DashBoardView from '@/views/dashboard'
 import WorkUnitView from '@/views/work/units'
 import WorkSuitsView from '@/views/work/suits'
-import MarketView from '@/views/market'
+import AppListView from '@/views/app'
 
 const routes = [
     {
@@ -35,14 +35,14 @@ const routes = [
         ]
     },
     {
-        path: '/market',
+        path: '/apps',
         component: () => import("@/components/layout"),
-        redirect: '/market/apps',
+        redirect: '/apps/index',
         children: [
             {
-                path: 'apps',
-                name: 'MarketApps',
-                component: MarketView
+                path: 'index',
+                name: 'AppList',
+                component: AppListView
             }
         ]
     }

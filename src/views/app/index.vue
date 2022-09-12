@@ -3,26 +3,26 @@
         <el-table :data="apps">
           <el-table-column type="index" width="50"></el-table-column>
           <el-table-column prop="name">
-            <template slot="header">{{ $t("market.app.name") }}</template>
+            <template slot="header">{{ $t("app.name") }}</template>
           </el-table-column>
           <el-table-column prop="version">
-            <template slot="header">{{ $t("market.app.version") }}</template>
+            <template slot="header">{{ $t("app.version") }}</template>
           </el-table-column>
           <el-table-column prop="author">
-            <template slot="header">{{ $t("market.app.author") }}</template>
+            <template slot="header">{{ $t("app.author") }}</template>
           </el-table-column>
           <el-table-column prop="authorEmail">
-            <template slot="header">{{ $t("market.app.authorEmail") }}</template>
+            <template slot="header">{{ $t("app.authorEmail") }}</template>
           </el-table-column>
           <el-table-column prop="pubDate">
-            <template slot="header">{{ $t("market.app.pubDate") }}</template>
+            <template slot="header">{{ $t("app.pubDate") }}</template>
           </el-table-column>
         </el-table>
     </div>
 </template>
 <script>
 export default {
-    name: "MarketView",
+    name: "AppListView",
     data() {
         return {
             apps: [

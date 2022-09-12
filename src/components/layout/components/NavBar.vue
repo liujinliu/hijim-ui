@@ -7,7 +7,7 @@
         <el-menu-item index="/work/units">{{ $t("nav.work.units") }}</el-menu-item>
         <el-menu-item index="/work/suits">{{ $t("nav.work.suits") }}</el-menu-item>
       </el-submenu>
-      <el-menu-item index="/market">{{ $t("nav.market") }}</el-menu-item>
+      <el-menu-item index="/apps">{{ $t("nav.app") }}</el-menu-item>
     </el-menu>
   </div>
 </template>

@@ -6,17 +6,15 @@ const EnLang = {
             units: "UNITS",
             suits: "SUITS"
         },
-        market: "APP-MARKET"
+        app: "APP"
     },
-    market: {
-        app: {
-            name: "NAME",
-            author: "AUTHOR",
-            authorEmail: "AUTHOR-EMAIL",
-            description: "DESCRIPTION",
-            version: "VERSION",
-            pubDate: "PUB-AT"
-        }
+    app: {
+        name: "NAME",
+        author: "AUTHOR",
+        authorEmail: "AUTHOR-EMAIL",
+        description: "DESCRIPTION",
+        version: "VERSION",
+        pubDate: "PUB-AT"
     }
 }
 
