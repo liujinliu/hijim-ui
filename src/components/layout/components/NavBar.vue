@@ -1,13 +1,13 @@
 <template>
   <div class="nav-bar-wrapper">
     <el-menu :default-active="active" mode="horizontal" router>
-      <el-menu-item index="/">首页</el-menu-item>
+      <el-menu-item index="/">{{ $t("nav.home")}}</el-menu-item>
       <el-submenu index="work">
-        <template slot="title">工作台</template>
-        <el-menu-item index="/work/units">用例管理</el-menu-item>
-        <el-menu-item index="/work/suits">套件管理</el-menu-item>
+        <template slot="title">{{ $t("nav.work.name")}}</template>
+        <el-menu-item index="/work/units">{{ $t("nav.work.units") }}</el-menu-item>
+        <el-menu-item index="/work/suits">{{ $t("nav.work.suits") }}</el-menu-item>
       </el-submenu>
-      <el-menu-item index="/market">应用市场</el-menu-item>
+      <el-menu-item index="/market">{{ $t("nav.market") }}</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -27,15 +27,15 @@ export default {
   width: 30%;
 }
 
-.nav-bar-wrapper /deep/ .el-menu.el-menu--horizontal {
+.nav-bar-wrapper :deep(.el-menu.el-menu--horizontal) {
     border-bottom: none;
 }
 
-.nav-bar-wrapper /deep/ .el-menu-item {
+.nav-bar-wrapper :deep(.el-menu-item) {
   font-size: xx-small;
 }
 
-.nav-bar-wrapper /deep/ .el-submenu__title {
+.nav-bar-wrapper :deep(.el-submenu__title) {
   font-size: xx-small;
 }
 
