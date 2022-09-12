@@ -15,7 +15,7 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const i18n = new VueI18n({
-  locale: 'en',
+  locale: 'zh',
   messages: {
     'zh': ZhLang,
     'en': EnLang

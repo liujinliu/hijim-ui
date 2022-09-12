@@ -39,4 +39,8 @@ export default {
   font-size: xx-small;
 }
 
+.nav-bar-wrapper :deep(.el-menu::after) {
+  clear: right;
+}
+
 </style>
