@@ -21,6 +21,7 @@
     </div>
 </template>
 <script>
+import fetch from '@/utils/fetch'
 export default {
     name: "AppListView",
     data() {
@@ -44,6 +45,11 @@ export default {
                 }
             ]
         }
+    },
+    created() {
+      fetch.apiRequest('app/1', 'get').then(res => {
+        console.log(res)
+      })
     }
 }
 </script>
