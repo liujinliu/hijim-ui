@@ -7,10 +7,12 @@ import EnLang from '@/assets/i18n/lang/en'
 import ZhLang from '@/assets/i18n/lang/zh'
 import VueRouter from 'vue-router'
 import routes from '@/routes'
+import global from '@/utils'
 
 Vue.use(ElementUI);
 Vue.use(VueI18n)
 Vue.use(VueRouter)
+Vue.use(global)
 
 Vue.config.productionTip = false
 
