@@ -14,7 +14,26 @@ const EnLang = {
         authorEmail: "AUTHOR-EMAIL",
         description: "DESCRIPTION",
         version: "VERSION",
-        pubDate: "PUB-AT"
+        createAt: "CREATE-AT"
+    },
+    button: {
+        addNew: "New",
+        confirm: "CONFIRM"
+    },
+    formMessage: {
+        appNameRequired: "please input the app name",
+        iniFileRequired: "please upload app ini file",
+        mainFileRequired: "please upload app main file",
+        appCreateSuccess: "app create success",
+        appCreateError: "app create error"
+    },
+    formLabel: {
+        appName: 'app name',
+        appIniFile: 'ini file',
+        appMainFile: 'main file'
+    },
+    diaglog: {
+        titleAddNewApp: 'Add New App'
     }
 }
 

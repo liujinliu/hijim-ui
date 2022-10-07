@@ -1,54 +1,48 @@
 <template>
     <div>
-        <el-table :data="apps">
-          <el-table-column type="index" width="50"></el-table-column>
-          <el-table-column prop="name">
-            <template slot="header">{{ $t("app.name") }}</template>
-          </el-table-column>
-          <el-table-column prop="version">
-            <template slot="header">{{ $t("app.version") }}</template>
-          </el-table-column>
-          <el-table-column prop="author">
-            <template slot="header">{{ $t("app.author") }}</template>
-          </el-table-column>
-          <el-table-column prop="authorEmail">
-            <template slot="header">{{ $t("app.authorEmail") }}</template>
-          </el-table-column>
-          <el-table-column prop="pubDate">
-            <template slot="header">{{ $t("app.pubDate") }}</template>
-          </el-table-column>
-        </el-table>
+        <div>
+          <el-button class="btn-wrapper" type="primary" size="small"
+                     @click="onAddNewClick">
+            {{ $t("button.addNew") }}
+          </el-button>
+        </div>
+        <div>
+          <app-list :key="appListDomKey"></app-list>
+        </div>
+        <el-dialog :visible="addNewAddDiagVisible" :title="$t('diaglog.titleAddNewApp')"
+                   show-close @close="addNewAddDiagVisible=false">
+          <app-new @on-success="onAddSuccess"></app-new>
+        </el-dialog>
     </div>
 </template>
 <script>
+import AppList from './components/AppList'
+import AppNew from './components/AppNew.vue'
 export default {
     name: "AppListView",
+    components: { AppList, AppNew },
     data() {
-        return {
-            apps: [
-                {
-                    name: 'hop-on-http',
-                    version: '0.0.1',
-                    author: 'liujinliu',
-                    authorEmail: 'xxxx@@xx.com',
-                    pubDate: '2022-09-12',
-                    description: '## VIA-HTTP'
-                },
-                {
-                    name: 'via-selenium',
-                    version: '0.0.1',
-                    author: 'liujinliu',
-                    authorEmail: 'xxxx@@xx.com',
-                    pubDate: '2022-09-10',
-                    description: '## BY SELENIUM'
-                }
-            ]
-        }
+      return {
+        appListDomKey: 0,
+        addNewAddDiagVisible: false
+      }
     },
-    created() {
-      this.$api.app.getDetail(1).then(res => {
-        console.log(res)
-      })
+    created() {},
+    methods: {
+      onAddNewClick() {
+        this.addNewAddDiagVisible = true
+      },
+
+      onAddSuccess() {
+        this.addNewAddDiagVisible = false
+        this.appListDomKey += 1
+      }
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.btn-wrapper {
+  margin-bottom: 10px;
+}
+</style>
